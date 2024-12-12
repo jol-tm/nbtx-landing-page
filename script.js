@@ -8,7 +8,7 @@ function checkscroll() {
     const navLine = document.querySelector("#navLine");
     const rollTop = document.querySelector("#rollTop");
 
-    if (window.scrollY >= (document.body.scrollHeight - window.innerHeight)) {
+    if (window.scrollY - (document.body.scrollHeight - window.innerHeight) >= -10) {
         navLine.style.opacity = "0";
     } else if (window.scrollY > 0) {
         navLine.style.width = 100 - (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + "%";
