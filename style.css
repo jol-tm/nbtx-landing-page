@@ -5,7 +5,7 @@
     --c2: #ffffff;
     --c3: #cec000;
     --c4: #0c0c0ce6;
-    scroll-padding-top: 10rem;
+    scroll-padding-top: 17rem;
 }
 
 @media only screen and (min-width : 0) {
@@ -32,6 +32,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: var(--c1);
+    overflow-x: hidden;
 }
 
 nav {
@@ -52,10 +53,11 @@ a {
     color: var(--c3);
     transition: .3s;
 }
-a:hover {
+a:hover, .playBtn:hover {
+    cursor: pointer;
     transform: translateY(-2px);
 }
-a:active {
+a:active, .playBtn:active {
     scale: .95;
 }
 
@@ -77,6 +79,7 @@ a:active {
 
 .titles {
     color: var(--c2);
+    margin-top: 3rem;
 }
 
 #releases, #social, #about {
@@ -87,7 +90,7 @@ a:active {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 90vw;
-    gap: 2rem 0;
+    gap: 5rem 0;
 }
 
 #social, #about {
@@ -106,6 +109,7 @@ a:active {
 #aboutImg {
     width: 30%;
     min-width: 18rem;
+    border: 4px solid var(--c2);
 }
 
 .section {
@@ -115,8 +119,8 @@ a:active {
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    height: 20rem;
     width: 20rem;
     border: 4px solid var(--c2);
 }
@@ -125,14 +129,63 @@ a:active {
     width: 100%;
 }
 
+.playBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: var(--c4);
+    right: 1rem;
+    bottom: -1.8rem;
+    border: 2px solid var(--c2);
+    backdrop-filter: blur(3px);
+    transition: .3s;
+}
+
+.time {
+    position: absolute;
+    bottom: -1.8rem;
+}
+
+.timeLine {
+    position: absolute;
+    bottom: -2.5rem;
+    width: 0%;
+    border: 2px solid var(--c2);
+    transition: .3s;
+    box-shadow: 0 0 1rem var(--c2);
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--c2);
+    height: 5rem;
+    width: 100%;
+    border-top: 2px solid var(--c2);
+    div, a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        height: inherit;
+    }
+}
+#footerLogo {
+    height: 100%;
+}
+#githubLogo {
+    height: 40%;
+}
+    
 #rollTop {
     position: fixed;
+    background-color: var(--c4);
     right: -3rem;
     bottom: 1rem;
-    padding: 0 .2rem;
-    background-color: var(--c4);
-    border: 3px solid var(--c2);
     transition: .5s;
+    border: 2px solid var(--c2);
 }
 
 @keyframes glow {
