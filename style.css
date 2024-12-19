@@ -152,8 +152,8 @@ a:active, .playBtn:active {
     bottom: -2.5rem;
     width: 0%;
     border: 2px solid var(--c2);
-    transition: .3s;
     box-shadow: 0 0 1rem var(--c2);
+    transition: .1s;
 }
 
 footer {

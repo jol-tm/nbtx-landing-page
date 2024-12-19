@@ -44,7 +44,7 @@ function manageMusic() {
             }
         });
         document.querySelectorAll(".time").forEach(e => {
-            e.innerHTML = "00:00";
+            e.innerHTML = "00:00/00:00";
             e.nextElementSibling.style.width = "0%";
         });
     }
@@ -57,10 +57,12 @@ function manageMusic() {
 
         interval = setInterval(() => {
             if (!audio.ended) {
-                let cur = audio.currentTime.toFixed(0) < 10 ? "0" + audio.currentTime.toFixed(0) : audio.currentTime.toFixed(0);
-                let dur = audio.duration.toFixed(0);
+                let cur = audio.currentTime;
+                let curF = secondsToMS(audio.currentTime);
+                let dur = audio.duration;
+                let durF = secondsToMS(audio.duration);
         
-                time.innerHTML = `${cur}:${dur}`;
+                time.innerHTML = `${curF}/${durF}`;
                 timeLine.style.width = (cur / dur * 100) + "%";
             } else {
                 this.innerHTML = playIcon;
@@ -73,4 +75,16 @@ function manageMusic() {
         clearInterval(interval);
         this.innerHTML = playIcon;
     }
+}
+
+function secondsToMS(sec) {
+    sec = sec.toFixed();
+    
+    let m = Math.floor(sec / 60);
+    let s = (sec % 60);
+
+    m < 10 ? m = "0" + m : m = m;
+    s < 10 ? s = "0" + s : s = s;
+
+    return `${m}:${s}`;
 }
