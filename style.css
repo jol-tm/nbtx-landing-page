@@ -179,15 +179,6 @@ footer {
     height: 40%;
 }
     
-#rollTop {
-    position: fixed;
-    background-color: var(--c4);
-    right: -3rem;
-    bottom: 1rem;
-    transition: .5s;
-    border: 2px solid var(--c2);
-}
-
 @keyframes glow {
     from {
         filter: drop-shadow(0 0 1rem var(--c2));

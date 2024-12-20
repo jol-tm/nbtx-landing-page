@@ -7,25 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let audio = new Audio();
+let interval;
+let time;
+let timeLine;
 
 function checkscroll() {
     const navLine = document.querySelector("#navLine");
-    const rollTop = document.querySelector("#rollTop");
 
     if (window.scrollY - (document.body.scrollHeight - window.innerHeight) >= -10) {
         navLine.style.opacity = "0";
     } else if (window.scrollY > 0) {
         navLine.style.width = 100 - (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + "%";
         navLine.style.opacity = "1";
-        rollTop.style.right = "-3rem";
     } else {
         navLine.style.width = "100%";
         navLine.style.opacity = "1";
-    }
-
-    // Separeted if to not conflict with the others ones
-    if (window.scrollY >= 1000) {
-        rollTop.style.right = "1rem";
     }
 }
 
@@ -33,21 +29,20 @@ function manageMusic() {
     const file = this.getAttribute("audio");
     const playIcon = `<img src="imgs/play_arrow.svg" alt="play">`;
     const stopIcon = `<img src="imgs/stop.svg" alt="stop">`;
-    let interval;
-    time = this.nextElementSibling; // Por algum motivo só funcionou sem colocar palavra chave da variável, sem ela começaa a interagir com todos os time conforme vai clicando, estranho.
+
+    time = this.nextElementSibling;
     timeLine = time.nextElementSibling;
-    
-    if (!audio.ended) {
-        document.querySelectorAll(".playBtn").forEach(e => {
-            if (e != this) {
-                e.innerHTML = playIcon;
-            }
-        });
-        document.querySelectorAll(".time").forEach(e => {
-            e.innerHTML = "00:00/00:00";
-            e.nextElementSibling.style.width = "0%";
-        });
-    }
+    clearInterval(interval);
+
+    document.querySelectorAll(".playBtn").forEach(e => {
+        if (e != this) {
+            e.innerHTML = playIcon;
+        }
+    });
+    document.querySelectorAll(".time").forEach(e => {
+        e.innerHTML = "00:00/00:00";
+        e.nextElementSibling.style.width = "0%";
+    });
     
     audio.src = file;
 
@@ -78,6 +73,10 @@ function manageMusic() {
 }
 
 function secondsToMS(sec) {
+    if (isNaN(sec)) {
+        return `00:00`;
+    }
+
     sec = sec.toFixed();
     
     let m = Math.floor(sec / 60);
