@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".playBtn").forEach(e => {
         e.addEventListener("click", manageMusic);
     });
+    window.scrollTo(0, 0);
     AOS.init();
 });
 
