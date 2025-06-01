@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".playBtn").forEach(e => {
         e.addEventListener("click", manageMusic);
     });
-    window.scrollTo(0, 0);
-    AOS.init();
+    setTimeout(() => {
+        AOS.init();
+    }, 500);
 });
 
 let audio = new Audio();
