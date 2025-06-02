@@ -3,9 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".playBtn").forEach(e => {
         e.addEventListener("click", manageMusic);
     });
-    setTimeout(() => {
-        AOS.init();
-    }, 500);
+    
+    const logo = [...document.querySelectorAll('#logo')]
+    const sections = [...document.querySelectorAll('section')];
+    const elementsToAnimate = logo.concat(sections);
+    
+    animateOnScroll(elementsToAnimate, 'showAnim', 'hideAnim');
 });
 
 let audio = new Audio();
@@ -88,4 +91,25 @@ function secondsToMS(sec) {
     s < 10 ? s = "0" + s : s = s;
 
     return `${m}:${s}`;
+}
+
+function animateOnScroll(elements, showAnim, hideAnim) {
+    const options = {
+        threshold: .1
+    }
+
+    const callback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(showAnim);
+                entry.target.classList.remove(hideAnim);
+            } else {
+                entry.target.classList.remove(showAnim);
+                entry.target.classList.add(hideAnim);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    elements.forEach((element) => observer.observe(element));
 }

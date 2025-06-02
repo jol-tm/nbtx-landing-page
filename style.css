@@ -4,7 +4,7 @@
     --c1: #0c0c0c;
     --c2: #ffffff;
     --c3: #cec000;
-    --c4: #0c0c0ce6;
+    --c4: #0d0d0df2;
     scroll-padding-top: 17rem;
 }
 
@@ -13,6 +13,7 @@
         flex-wrap: wrap;
     }
 }
+
 @media only screen and (min-width : 992px) {
     #about {
         flex-wrap: nowrap;
@@ -45,7 +46,6 @@ nav {
     width: 100%;
     background-color: var(--c4);
     padding: 1rem 2.3rem 1rem 1rem;
-    backdrop-filter: blur(2px);
 }
 
 a {
@@ -53,11 +53,15 @@ a {
     color: var(--c3);
     transition: .3s;
 }
-a:hover, .playBtn:hover {
+
+a:hover,
+.playBtn:hover {
     cursor: pointer;
     transform: translateY(-2px);
 }
-a:active, .playBtn:active {
+
+a:active,
+.playBtn:active {
     scale: .95;
 }
 
@@ -74,7 +78,8 @@ a:active, .playBtn:active {
     height: 100vh;
     width: 100vw;
     background: url(imgs/NBTX-logo.png) no-repeat center / contain;
-    animation: glow 2s alternate infinite;
+    transition: 1s;
+    animation: glow 2s alternate infinite, jumpIn 2s forwards;
 }
 
 .titles {
@@ -82,7 +87,9 @@ a:active, .playBtn:active {
     margin-top: 3rem;
 }
 
-#releases, #social, #about {
+#releases,
+#social,
+#about {
     display: flex;
 }
 
@@ -93,7 +100,8 @@ a:active, .playBtn:active {
     gap: 5rem 0;
 }
 
-#social, #about {
+#social,
+#about {
     justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
@@ -112,10 +120,12 @@ a:active, .playBtn:active {
     border: 4px solid var(--c2);
 }
 
-.section {
+section {
     max-width: 100rem;
     color: var(--c2);
     margin: 3rem 0;
+    opacity: 0;
+    transition: .5s;
 }
 
 .box {
@@ -135,7 +145,8 @@ a:active, .playBtn:active {
     text-shadow: 0 0 .5rem var(--c1);
 }
 
-.track, .trackCover {
+.track,
+.trackCover {
     width: 100%;
 }
 
@@ -174,7 +185,9 @@ footer {
     height: 5rem;
     width: 100%;
     border-top: 2px solid var(--c2);
-    div, a {
+
+    div,
+    a {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -182,17 +195,42 @@ footer {
         height: inherit;
     }
 }
+
 #footerLogo {
     height: 100%;
 }
+
 #githubLogo {
     height: 40%;
 }
-    
+
+.showAnim {
+    scale: 1;
+    opacity: 1;
+}
+
+.hideAnim {
+    scale: .9;
+    opacity: 0;
+}
+
 @keyframes glow {
     from {
         filter: drop-shadow(0 0 1rem var(--c2));
-    } to {
+    }
+
+    to {
         filter: drop-shadow(0 0 1rem var(--c3));
+    }
+}
+@keyframes jumpIn {
+    from {
+        transform: translateY(-5rem);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
