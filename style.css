@@ -4,6 +4,7 @@
     --c3: #cec000;
     --c4: #0d0d0df2;
     scroll-padding-top: 17rem;
+    scroll-behavior: smooth;
 }
 
 @media only screen and (min-width : 0) {
@@ -18,10 +19,17 @@
     }
 }
 
+@font-face {
+    src: url('./fonts/Nova_Square/NovaSquare-Regular.woff2') format('woff2');
+    font-family: "Nova Square";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     text-decoration: none;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +39,6 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: var(--c1);
-    overflow-x: hidden;
 }
 
 nav {
