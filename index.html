@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imgs/NBTX-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="shortcut icon" href="imgs/NBTX-logo.webp" type="image/x-icon">
+    <script defer src="script.js"></script>
     <title>NBTX</title>
 </head>
+
 <body>
     <nav>
         <a href="#releases">Releases</a>
@@ -20,22 +25,28 @@
     <section id="releases">
         <div class="box">
             <h2 class="title">Skybound Echoes</h2>
-            <img class="trackCover" src="https://i1.sndcdn.com/artworks-UGCzMXX2k6K9Ncv5-2vsulQ-t500x500.jpg" alt="">
-            <div audio="audios/Skybound Echoes.mpga" class="playBtn"><img src="imgs/play_arrow.svg" alt="play"></div>
+            <img loading="lazy" class="trackCover"
+                src="https://i1.sndcdn.com/artworks-UGCzMXX2k6K9Ncv5-2vsulQ-t500x500.jpg" alt="">
+            <div audio="audios/Skybound Echoes.mpga" class="playBtn"><img loading="lazy" src="imgs/play_arrow.svg"
+                    alt="play"></div>
             <div class="time">00:00/00:00</div>
             <hr class="timeLine">
         </div>
         <div class="box">
             <h2 class="title">Raise a Glass</h2>
-            <img class="trackCover" src="https://i1.sndcdn.com/artworks-U2otdicrgBRQPym7-ZuFp7w-t500x500.jpg" alt="">
-            <div audio="audios/Raise_a_Glass.mpga" class="playBtn"><img src="imgs/play_arrow.svg" alt="play"></div>
+            <img loading="lazy" class="trackCover"
+                src="https://i1.sndcdn.com/artworks-U2otdicrgBRQPym7-ZuFp7w-t500x500.jpg" alt="">
+            <div audio="audios/Raise_a_Glass.mpga" class="playBtn"><img loading="lazy" src="imgs/play_arrow.svg"
+                    alt="play"></div>
             <div class="time">00:00/00:00</div>
             <hr class="timeLine">
         </div>
         <div class="box">
             <h2 class="title">Autumn</h2>
-            <img class="trackCover" src="https://i1.sndcdn.com/artworks-RiX7yeA3jYXrvs7c-K9ZBSg-t500x500.jpg" alt="">
-            <div audio="audios/Autumn.mpga" class="playBtn"><img src="imgs/play_arrow.svg" alt="play"></div>
+            <img loading="lazy" class="trackCover"
+                src="https://i1.sndcdn.com/artworks-RiX7yeA3jYXrvs7c-K9ZBSg-t500x500.jpg" alt="">
+            <div audio="audios/Autumn.mpga" class="playBtn"><img loading="lazy" src="imgs/play_arrow.svg" alt="play">
+            </div>
             <div class="time">00:00/00:00</div>
             <hr class="timeLine">
         </div>
@@ -43,26 +54,32 @@
     <h1 class="titles">- Social -</h1>
     <section id="social">
         <a href="https://www.instagram.com/nathanbeatxofficial" target="_blank">
-            <img src="imgs/instagram.svg" alt="instagram logo">
+            <img loading="lazy" src="imgs/instagram.svg" alt="instagram logo">
         </a>
         <a href="https://soundcloud.com/nbtx-nathanbeatx" target="_blank">
-            <img  src="imgs/soundcloud.svg" alt="soundcloud logo">
+            <img loading="lazy" src="imgs/soundcloud.svg" alt="soundcloud logo">
         </a>
         <a href="https://www.threads.net/@nathanbeatxofficial" target="_blank">
-            <img src="imgs/threads.svg" alt="threads logo">
+            <img loading="lazy" src="imgs/threads.svg" alt="threads logo">
         </a>
     </section>
     <h1 class="titles">- About -</h1>
     <section id="about">
-        <p id="aboutTxt">Nathan Barbosa, known artistically as NBTX, is a talented music producer who began his journey in 2018. His stage name, derived from Nathan BeatX, reflects his passion for music and creativity. Using FL Studio as his main tool, NBTX has stood out in the production of versatile tracks and beats. Always seeking to improve his skills, he aims to offer high-quality projects for game producers and artists looking for a dedicated and innovative professional in music creation.</p>
-        <img id="aboutImg" src="imgs/aboutImg.jpeg" alt="Picture of NBTX">
+        <p id="aboutTxt">Nathan Barbosa, known artistically as NBTX, is a talented music producer who began his journey
+            in 2018. His stage name, derived from Nathan BeatX, reflects his passion for music and creativity. Using FL
+            Studio as his main tool, NBTX has stood out in the production of versatile tracks and beats. Always seeking
+            to improve his skills, he aims to offer high-quality projects for game producers and artists looking for a
+            dedicated and innovative professional in music creation.</p>
+        <img loading="lazy" id="aboutImg" src="imgs/aboutImg.webp" alt="Picture of NBTX">
     </section>
     <footer>
         <div>
             <p>Developed by jol-tm</p>
-            <a href="https://github.com/jol-tm/" target="_blank"><img id="githubLogo" src="imgs/github.svg" alt="GitHub logo"></a>
+            <a href="https://github.com/jol-tm/" target="_blank"><img loading="lazy" id="githubLogo"
+                    src="imgs/github.svg" alt="GitHub logo"></a>
         </div>
-        <a href="#top"><img id="footerLogo" src="imgs/NBTX-logo.png" alt="NBTX logo"></a>
+        <a href="#top"><img loading="lazy" id="footerLogo" src="imgs/NBTX-logo.webp" alt="NBTX logo"></a>
     </footer>
 </body>
+
 </html>

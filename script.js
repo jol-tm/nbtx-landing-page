@@ -1,15 +1,13 @@
 document.addEventListener("scroll", checkscroll);
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".playBtn").forEach(e => {
-        e.addEventListener("click", manageMusic);
-    });
-    
-    const logo = [...document.querySelectorAll('#logo')]
-    const sections = [...document.querySelectorAll('section')];
-    const elementsToAnimate = logo.concat(sections);
-    
-    animateOnScroll(elementsToAnimate, 'showAnim', 'hideAnim');
+document.querySelectorAll(".playBtn").forEach(e => {
+    e.addEventListener("click", manageMusic);
 });
+
+const logo = [...document.querySelectorAll('#logo')]
+const sections = [...document.querySelectorAll('section')];
+const elementsToAnimate = logo.concat(sections);
+
+animateOnScroll(elementsToAnimate, 'showAnim', 'hideAnim');
 
 let audio = new Audio();
 let interval;
@@ -48,10 +46,10 @@ function manageMusic() {
         e.innerHTML = "00:00/00:00";
         e.nextElementSibling.style.width = "0%";
     });
-    
+
     audio.src = file;
 
-    if (this.innerHTML == playIcon ) {
+    if (this.innerHTML == playIcon) {
         audio.play();
         this.innerHTML = stopIcon;
 
@@ -61,7 +59,7 @@ function manageMusic() {
                 let curF = secondsToMS(audio.currentTime);
                 let dur = audio.duration;
                 let durF = secondsToMS(audio.duration);
-        
+
                 time.innerHTML = `${curF}/${durF}`;
                 timeLine.style.width = (cur / dur * 100) + "%";
             } else {
@@ -83,7 +81,7 @@ function secondsToMS(sec) {
     }
 
     sec = sec.toFixed();
-    
+
     let m = Math.floor(sec / 60);
     let s = (sec % 60);
 
