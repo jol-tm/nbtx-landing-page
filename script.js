@@ -20,10 +20,10 @@ function checkscroll() {
     if (window.scrollY - (document.body.scrollHeight - window.innerHeight) >= -10) {
         navLine.style.opacity = "0";
     } else if (window.scrollY > 0) {
-        navLine.style.width = 100 - (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + "%";
+        navLine.style.width = 100 - (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + "vw";
         navLine.style.opacity = "1";
     } else {
-        navLine.style.width = "100%";
+        navLine.style.width = "100vw";
         navLine.style.opacity = "1";
     }
 }
