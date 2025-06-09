@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
-    <style>body,nav{display:flex}#navLine,nav{z-index:1;position:fixed}:root{--c1:#0c0c0c;--c2:#ffffff;--c3:#cec000;--c4:#0d0d0df2;scroll-padding-top:17rem;scroll-behavior:smooth}@media only screen and (min-width :0){#about{flex-wrap:wrap}}@media only screen and (min-width :992px){#about{flex-wrap:nowrap}}*{margin:0;text-decoration:none}body{font-family:"Nova Square",sans-serif;justify-content:center;align-items:center;flex-direction:column;background-color:var(--c1)}nav{top:0;justify-content:space-evenly;align-items:center;width:100%;background-color:var(--c4);padding:1rem 2.3rem 1rem 1rem}a{font-size:1.5rem;color:var(--c3);transition:.3s}.playBtn:hover,a:hover{cursor:pointer;transform:translateY(-2px)}.playBtn:active,a:active{scale:.95}#navLine{top:3.8rem;width:100vw;border:2px solid var(--c2);transition:width 1s,opacity 1s}#logo{height:100vh;width:100vw;background:url(imgs/NBTX-logo.webp) center/contain no-repeat;transition:1s;animation:2s infinite alternate glow,2s forwards jumpIn}</style>
+    <meta name="description"
+        content="NBTX is a talented music producer using FL Studio as his main tool. Always seeking to improve his skills, he aims to offer high-quality projects.">
+    <style>body,nav{display:flex}#navLine,nav{z-index:1;position:fixed}:root{--c1:#0c0c0c;--c2:#fff;--c3:#cec000;--c4:#0d0d0df2;scroll-padding-top:17rem;scroll-behavior:smooth}@media only screen and (min-width:0){#about{flex-wrap:wrap}}@media only screen and (min-width:992px){#about{flex-wrap:nowrap}}*{margin:0;text-decoration:none}body{font-family:"Nova Square",sans-serif;justify-content:center;align-items:center;flex-direction:column;background-color:var(--c1);overflow-x:hidden}nav{top:0;justify-content:space-evenly;align-items:center;width:100%;background-color:var(--c4);padding:1rem 2.3rem 1rem 1rem}a{font-size:1.5rem;color:var(--c3);transition:.3s}.playBtn:hover,a:hover{cursor:pointer;transform:translateY(-2px)}.playBtn:active,a:active{scale:.95}#navLine{top:3.8rem;width:100vw;border:2px solid var(--c2);transition:width 1s,opacity 1s}#logo{height:100vh;width:100vw;background:url(imgs/NBTX-logo.webp) center/contain no-repeat;transition:1s;animation:2s infinite alternate glow,2s forwards jumpIn}</style>
     <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="shortcut icon" href="imgs/NBTX-logo.webp" type="image/x-icon">
     <script defer src="script.js"></script>
@@ -28,12 +27,7 @@
             <h2 class="title">Skybound Echoes</h2>
             <img loading="lazy" class="trackCover"
                 src="https://i1.sndcdn.com/artworks-UGCzMXX2k6K9Ncv5-2vsulQ-t500x500.jpg" alt="">
-            <div audio="audios/Skybound Echoes.mpga" class="playBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
-                    fill="#FFFFFF">
-                    <path d="M360-272.31v-415.38L686.15-480 360-272.31ZM400-480Zm0 134 211.54-134L400-614v268Z" />
-                </svg>
-            </div>
+            <div audio="audios/Skybound Echoes.mpga" class="playBtn"><img src="imgs/play_arrow.svg" alt="play"></div>
             <div class="time">00:00/00:00</div>
             <hr class="timeLine">
         </div>
@@ -41,12 +35,7 @@
             <h2 class="title">Raise a Glass</h2>
             <img loading="lazy" class="trackCover"
                 src="https://i1.sndcdn.com/artworks-U2otdicrgBRQPym7-ZuFp7w-t500x500.jpg" alt="">
-            <div audio="audios/Raise_a_Glass.mpga" class="playBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
-                    fill="#FFFFFF">
-                    <path d="M360-272.31v-415.38L686.15-480 360-272.31ZM400-480Zm0 134 211.54-134L400-614v268Z" />
-                </svg>
-            </div>
+            <div audio="audios/Raise_a_Glass.mpga" class="playBtn"><img src="imgs/play_arrow.svg" alt="play"></div>
             <div class="time">00:00/00:00</div>
             <hr class="timeLine">
         </div>
@@ -54,26 +43,21 @@
             <h2 class="title">Autumn</h2>
             <img loading="lazy" class="trackCover"
                 src="https://i1.sndcdn.com/artworks-RiX7yeA3jYXrvs7c-K9ZBSg-t500x500.jpg" alt="">
-            <div audio="audios/Autumn.mpga" class="playBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
-                    fill="#FFFFFF">
-                    <path d="M360-272.31v-415.38L686.15-480 360-272.31ZM400-480Zm0 134 211.54-134L400-614v268Z" />
-                </svg>
-            </div>
+            <div audio="audios/Autumn.mpga" class="playBtn"><img src="imgs/play_arrow.svg" alt="play"></div>
             <div class="time">00:00/00:00</div>
             <hr class="timeLine">
         </div>
     </section>
     <h1 class="titles">- Social -</h1>
     <section id="social">
-        <a href="https://www.instagram.com/nathanbeatxofficial" target="_blank">
+        <a href="https://www.instagram.com/nathanbeatxofficial" target="_blank" aria-label="Access instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#fff" class="bi bi-instagram"
                 viewBox="0 0 16 16">
                 <path
                     d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
             </svg>
         </a>
-        <a href="https://soundcloud.com/nbtx-nathanbeatx" target="_blank">
+        <a href="https://soundcloud.com/nbtx-nathanbeatx" target="_blank" aria-label="Access soundcloud">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#fff" viewBox="0 0 75 33.51">
                 <g id="Layer_2" data-name="Layer 2">
                     <g id="Orange">
@@ -97,7 +81,7 @@
                 </g>
             </svg>
         </a>
-        <a href="https://www.threads.net/@nathanbeatxofficial" target="_blank">
+        <a href="https://www.threads.net/@nathanbeatxofficial" target="_blank" aria-label="Access threads">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#fff" class="bi bi-threads"
                 viewBox="0 0 16 16">
                 <path
@@ -118,7 +102,7 @@
     </section>
     <footer>
         <p>Developed by jol-tm</p>
-        <a href="https://github.com/jol-tm/" target="_blank"></a>
+        <a href="https://github.com/jol-tm/" target="_blank" aria-label="Access developer github"></a>
         <a href="#top"><img loading="lazy" id="footerLogo" src="imgs/NBTX-logo.webp" alt="NBTX logo"></a>
     </footer>
 </body>
